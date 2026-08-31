@@ -1,5 +1,6 @@
 import { ArrowRight, Building2, Handshake } from "lucide-react";
 import type { SitePage } from "../content/pages";
+import { useLanguage } from "../context/LanguageContext";
 
 const partnerLogos = [
   { src: "/images/partner-aditya.webp", alt: "Aditya Birla Group", className: "partner-editorial-logo-aditya" },
@@ -13,14 +14,15 @@ const partnerLogos = [
 ];
 
 export default function PartnersPage({ page }: { page: SitePage }) {
+  const { t } = useLanguage();
   const institutions = page.sections.slice(0, 8);
   const invitation = page.sections[8];
 
   return <section className="partners-editorial section">
     <div className="container">
       <header className="partners-editorial-intro">
-        <div><Handshake aria-hidden="true" /><span>Shared work, clearly defined</span></div>
-        <p>Each collaboration brings a different kind of strength: public-health knowledge, academic involvement, community access, specialist experience or programme support.</p>
+        <div><Handshake aria-hidden="true" /><span>{t("Shared work, clearly defined")}</span></div>
+        <p>{t("Each collaboration brings a different kind of strength: public-health knowledge, academic involvement, community access, specialist experience or programme support.")}</p>
       </header>
 
       <div className="partners-editorial-grid">
@@ -41,7 +43,7 @@ export default function PartnersPage({ page }: { page: SitePage }) {
 
       {invitation && <aside className="partners-editorial-invite">
         <Building2 aria-hidden="true" />
-        <div><span>Work with Punjabi Samvad</span><h2>{invitation.title}</h2><p>{invitation.body}</p></div>
+        <div><span>{t("Work with Punjabi Samvad")}</span><h2>{invitation.title}</h2><p>{invitation.body}</p></div>
         <a className="button button-white" href={page.cta?.href ?? "/discuss-partnership"}>{page.cta?.label ?? "Discuss a partnership"} <ArrowRight size={17} /></a>
       </aside>}
     </div>

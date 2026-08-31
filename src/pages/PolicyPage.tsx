@@ -5,7 +5,9 @@ import SiteHeader from "../components/SiteHeader";
 import NotFoundPage from "./NotFoundPage";
 import { getPolicy } from "../content/policies";
 
+
 export default function PolicyPage() {
+  
   const { policy: slug } = useParams();
   const policy = slug ? getPolicy(slug) : undefined;
   

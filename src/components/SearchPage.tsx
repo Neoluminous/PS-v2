@@ -4,10 +4,12 @@ import { ArrowRight, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useMemo, useState } from "react";
 import type { SearchEntry } from "../content/search";
+import { useLanguage } from "../context/LanguageContext";
 
 function normalize(value: string) { return value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim(); }
 
 export default function SearchPage({ entries, initialQuery }: { entries: SearchEntry[]; initialQuery: string }) {
+  const { t } = useLanguage();
   const [query, setQuery] = useState(initialQuery);
   const results = useMemo(() => {
     const terms = normalize(query).split(" ").filter(Boolean);
@@ -21,14 +23,14 @@ export default function SearchPage({ entries, initialQuery }: { entries: SearchE
   return <section className="search-page section">
     <div className="container search-page-layout">
       <header className="search-page-header">
-        <span className="eyebrow">Explore Punjabi Samvad</span>
-        <h1>What are you looking for?</h1>
-        <p>Search programmes, public-health work, impact, people, policies and ways to participate.</p>
+        <span className="eyebrow">{t("Explore Punjabi Samvad")}</span>
+        <h1>{t("What are you looking for?")}</h1>
+        <p>{t("Search programmes, public-health work, impact, people, policies and ways to participate.")}</p>
         <form className="search-page-form" action="/search" method="get" role="search">
           <Search aria-hidden="true" />
-          <label className="sr-only" htmlFor="site-search-page-input">Search the website</label>
-          <input id="site-search-page-input" name="q" type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search the website" />
-          <button type="submit">Search <ArrowRight /></button>
+          <label className="sr-only" htmlFor="site-search-page-input">{t("Search the website")}</label>
+          <input id="site-search-page-input" name="q" type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder={t("Search the website")} />
+          <button type="submit">{t("Search ")} <ArrowRight /></button>
         </form>
       </header>
       <div className="search-results-meta"><strong data-search-count>{results.length}</strong><span>{query ? `results for “${query}”` : "pages and resources"}</span></div>
@@ -40,7 +42,7 @@ export default function SearchPage({ entries, initialQuery }: { entries: SearchE
           </a>;
         })}
       </div>
-      <div className="search-empty" data-search-empty hidden={results.length > 0}><strong>No matching pages yet.</strong><p>Try a broader phrase, or visit <Link to="/contact">Contact</Link> and ask us directly.</p></div>
+      <div className="search-empty" data-search-empty hidden={results.length > 0}><strong>No matching pages yet.</strong><p>{t("Try a broader phrase, or visit")} <Link to="/contact">Contact</Link> {t("and ask us directly.")}</p></div>
     </div>
   </section>;
 }

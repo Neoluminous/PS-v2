@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import type { SitePage } from "../content/pages";
+import { useLanguage } from "../context/LanguageContext";
 
 const heroPhotos = [
   { src: "/images/gallery/women-education-group.webp", alt: "Women gathered after a Punjabi Samvad education programme" },
@@ -27,6 +28,7 @@ const archivePhotos = [
 ];
 
 export default function GalleryPage({ page }: { page: SitePage }) {
+  const { t } = useLanguage();
   const photos = [...heroPhotos, ...archivePhotos];
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
@@ -68,8 +70,8 @@ export default function GalleryPage({ page }: { page: SitePage }) {
     <section className="gallery-archive section">
       <div className="container">
         <header className="gallery-archive-heading">
-          <h2>Work seen up close.</h2>
-          <p>Programmes, performances, public-health campaigns and community gatherings documented across Punjabi Samvad&apos;s work.</p>
+          <h2>{t("Work seen up close.")}</h2>
+          <p>{t("Programmes, performances, public-health campaigns and community gatherings documented across Punjabi Samvad's work.")}</p>
         </header>
         <div className="gallery-masonry">
           {archivePhotos.map((photo, index) => <figure className={`gallery-frame gallery-frame-${index + 1}`} key={photo.src}>
@@ -79,7 +81,7 @@ export default function GalleryPage({ page }: { page: SitePage }) {
           </figure>)}
         </div>
         {page.cta && <Link className="gallery-next" to={page.cta.href}>
-          <span>Learn how the work is organised</span>
+          <span>{t("Learn how the work is organised")}</span>
           <strong>{page.cta.label}</strong>
           <ArrowRight aria-hidden="true" />
         </Link>}

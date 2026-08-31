@@ -1,4 +1,5 @@
 import { ArrowUpRight, Award, BookOpen, Clock3, Globe2, ShieldCheck, Smartphone, Users } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
 
 type ProgrammeKey = "passport-to-earning" | "know-your-money";
 
@@ -46,6 +47,7 @@ const programmes = {
 } as const;
 
 export default function LearningProgrammePage({ programme }: { programme: ProgrammeKey }) {
+  const { t } = useLanguage();
   const page = programmes[programme];
   return <div className={`learning-page learning-page-${page.theme}`}>
     <section className="learning-hero"><div className="container learning-hero-grid">
@@ -56,13 +58,13 @@ export default function LearningProgrammePage({ programme }: { programme: Progra
     <section className="learning-facts-wrap"><div className="container learning-facts">{page.facts.map(([value, label], i) => <div key={label}><span>{programme === "passport-to-earning" ? (i === 0 ? <ShieldCheck /> : <Award />) : i === 0 ? <Users /> : i === 1 ? <Clock3 /> : i === 2 ? <Globe2 /> : <Award />}</span><strong>{value}</strong><small>{label}</small></div>)}</div></section>
     {programme === "passport-to-earning" && <section className="learning-field-section"><div className="container">
       <div className="learning-field-media">
-        <figure className="learning-field-video"><video controls playsInline preload="metadata" poster="/images/programmes/passport-to-earning/p2e-learner-testimonial-poster.webp"><source src="/videos/programmes/passport-to-earning/p2e-learner-testimonial.mp4" type="video/mp4" />Your browser does not support embedded video.</video></figure>
+        <figure className="learning-field-video"><video controls playsInline preload="metadata" poster="/images/programmes/passport-to-earning/p2e-learner-testimonial-poster.webp"><source src="/videos/programmes/passport-to-earning/p2e-learner-testimonial.mp4" type="video/mp4" />{t("Your browser does not support embedded video.")}</video></figure>
         <figure className="learning-field-photo learning-field-photo-phones"><img loading="lazy" decoding="async" src="/images/programmes/passport-to-earning/p2e-classroom-phones.webp" alt="Women at a Passport to Earning session holding up phones showing their learning screens" /></figure>
         <figure className="learning-field-photo learning-field-photo-college"><img loading="lazy" decoding="async" src="/images/programmes/passport-to-earning/p2e-dav-college-session.webp" alt="Digital productivity session at DAV College of Education for Women" /></figure>
       </div>
     </div></section>}
     <section className="learning-photo-story"><div className="container learning-photo-grid"><figure className="learning-photo-wide"><img loading="lazy" decoding="async" src={page.images[1]} alt={page.alts[1]} /></figure><div className="learning-topic-panel"><span>What learners cover</span><h2>Useful knowledge, built for real life.</h2><ul>{page.topics.map((topic, i) => <li key={topic}><i>{String(i + 1).padStart(2, "0")}</i><strong>{topic}</strong></li>)}</ul></div></div></section>
     <section className="learning-deeper"><div className="container learning-deeper-grid"><div className="learning-deeper-copy"><span><Smartphone /> Learn online</span><h2>{page.detailTitle}</h2>{page.detail.map(p => <p key={p}>{p}</p>)}</div><figure className="learning-official-visual"><img loading="lazy" decoding="async" src={page.images[2]} alt={page.alts[2]} /></figure></div></section>
-    <section className="learning-cta-section"><div className="container"><div className="learning-cta"><ShieldCheck /><div><span>Official enrolment</span><h2>{page.ctaTitle}</h2><p>{page.ctaText}</p></div><a href={page.href} target="_blank" rel="noreferrer">Enroll now <ArrowUpRight /></a></div></div></section>
+    <section className="learning-cta-section"><div className="container"><div className="learning-cta"><ShieldCheck /><div><span>{t("Official enrolment")}</span><h2>{page.ctaTitle}</h2><p>{page.ctaText}</p></div><a href={page.href} target="_blank" rel="noreferrer">Enroll now <ArrowUpRight /></a></div></div></section>
   </div>;
 }

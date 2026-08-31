@@ -18,6 +18,7 @@ import PartnersPage from "../components/PartnersPage";
 import GetInvolvedPage from "../components/GetInvolvedPage";
 import SkillsLivelihoodsPage from "../components/SkillsLivelihoodsPage";
 import NotFoundPage from "./NotFoundPage";
+import { useLanguage } from "../context/LanguageContext";
 
 const legacyLearningRoutes: Record<string, string> = {
   "passport-to-earning": "/p2e",
@@ -38,9 +39,9 @@ const featurePhotos: Record<string, { src: string; alt: string }> = {
 
 export default function ContentPage() {
   const { slug } = useParams();
+  const { t } = useLanguage();
   
   if (!slug) return <NotFoundPage />;
-
   const legacyDestination = legacyLearningRoutes[slug];
   if (legacyDestination) return <Navigate to={legacyDestination} replace />;
   
@@ -67,19 +68,19 @@ export default function ContentPage() {
     <main>
       {structuredData}
       <SiteHeader />
-      <section className="page-hero"><div className="page-hero-image" /><div className="container page-hero-content"><span className="eyebrow light">{page.eyebrow}</span><h1>{page.title}</h1><p>{page.intro}</p></div></section>
+      <section className="page-hero"><div className="page-hero-image" /><div className="container page-hero-content"><span className="eyebrow light">{t(page.eyebrow)}</span><h1>{t(page.title)}</h1><p>{t(page.intro)}</p></div></section>
       {slug === "media-features" ? <MediaFeaturesPage /> : slug === "donate" ? <DonatePage /> : slug === "leadership" ? <PresidentPage /> : slug === "supporters" ? <SupportersPage /> : slug === "partners" ? <PartnersPage page={page} /> : <section className="page-body section"><div className="container">
-        {slug !== "updates" && <div className="page-lead"><MessageCircle /><p>Punjabi Samvad creates space for people to ask questions, share experience and participate in the issues that affect their lives.</p></div>}
+        {slug !== "updates" && <div className="page-lead"><MessageCircle /><p>{t("Punjabi Samvad creates space for people to ask questions, share experience and participate in the issues that affect their lives.")}</p></div>}
         {featurePhoto && <div className="page-feature-photo"><img loading="lazy" decoding="async" src={featurePhoto.src} alt={featurePhoto.alt} /></div>}
         {slug === "updates" ? <FacebookUpdates /> : <div className="content-grid">{page.sections.map((section: any, index: number) => <article className="content-card" key={section.title}>
-          <span className="content-number">{String(index+1).padStart(2,"0")}</span><h2>{section.title}</h2>{section.stat && <strong className="content-stat">{section.stat}</strong>}{section.body.split("\n").map((line: string) => <p key={line}>{line}</p>)}
-          {section.bullets && <ul>{section.bullets.map((item: string) => <li key={item}><Check />{item}</li>)}</ul>}
+          <span className="content-number">{String(index+1).padStart(2,"0")}</span><h2>{t(section.title)}</h2>{section.stat && <strong className="content-stat">{t(section.stat)}</strong>}{section.body.split("\n").map((line: string) => <p key={line}>{t(line)}</p>)}
+          {section.bullets && <ul>{section.bullets.map((item: string) => <li key={item}><Check />{t(item)}</li>)}</ul>}
         </article>)}</div>}
         {slug === "programmes" && <article className="hiv-resource">
-          <div className="hiv-resource-copy"><span className="eyebrow">Public-health resource</span><h2>Private HIV self-risk assessment</h2><p>The national self-risk assessment gives people a private way to understand potential HIV and STI risk, find reliable information and take the next step towards testing or treatment. Personal details do not need to be disclosed to Punjabi Samvad.</p><p>Scan the code in the official campaign artwork, visit Breakfree India, or call the national AIDS helpline at 1097.</p><a className="button" href="https://www.breakfreeindia.org/" target="_blank" rel="noreferrer">Open Breakfree India <ArrowRight size={17}/></a></div>
+          <div className="hiv-resource-copy"><span className="eyebrow">{t("Public-health resource")}</span><h2>{t("Private HIV self-risk assessment")}</h2><p>{t("The national self-risk assessment gives people a private way to understand potential HIV and STI risk, find reliable information and take the next step towards testing or treatment. Personal details do not need to be disclosed to Punjabi Samvad.")}</p><p>{t("Scan the code in the official campaign artwork, visit Breakfree India, or call the national AIDS helpline at 1097.")}</p><a className="button" href="https://www.breakfreeindia.org/" target="_blank" rel="noreferrer">{t("Open Breakfree India")} <ArrowRight size={17}/></a></div>
           <img loading="lazy" decoding="async" src="/images/real/hiv-self-risk-assessment.jpeg" alt="National HIV self-risk assessment campaign with QR code and AIDS helpline 1097" />
         </article>}
-        {page.cta && <div className="page-cta"><div><span>Ready to start a conversation?</span><h2>Let&apos;s create meaningful change together.</h2></div><a className="button button-white" href={page.cta.href}>{page.cta.label}<ArrowRight size={17}/></a></div>}
+        {page.cta && <div className="page-cta"><div><span>{t("Ready to start a conversation?")}</span><h2>{t("Let's create meaningful change together.")}</h2></div><a className="button button-white" href={page.cta.href}>{t(page.cta.label)}<ArrowRight size={17}/></a></div>}
       </div></section>}
       <SiteFooter />
     </main>
