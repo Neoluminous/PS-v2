@@ -16,7 +16,17 @@ const targets = [
   ".work-hero-copy", ".work-hero-media", ".work-intro-statement", ".focus-story", ".programme-method > div", ".programme-story", ".hiv-resource-redesign > *", ".impact-figures > div", ".impact-opening > *", ".impact-measurement > *", ".impact-learning-grid > article", ".work-next-link",
   ".gallery-hero-copy", ".gallery-hero-photo", ".gallery-archive-heading", ".gallery-frame", ".gallery-next",
   ".skills-hero-copy", ".skills-hero-media > figure", ".skills-practice-head > *", ".skills-practice-list > article", ".skills-partnership", ".skills-stories-head > *", ".skills-story", ".skills-field-note-grid > *", ".skills-closing-inner > *",
-  ".learning-hero-copy", ".learning-hero-visual", ".learning-section-label", ".learning-prose", ".learning-facts > div", ".learning-field-heading", ".learning-field-media > figure", ".learning-photo-wide", ".learning-topic-panel", ".learning-deeper-copy", ".learning-official-visual", ".learning-cta", ".learning-programme-links > a"
+  ".learning-hero-copy", ".learning-hero-visual", ".learning-section-label", ".learning-prose", ".learning-facts > div", ".learning-field-heading", ".learning-field-media > figure", ".learning-photo-wide", ".learning-topic-panel", ".learning-deeper-copy", ".learning-official-visual", ".learning-cta", ".learning-programme-links > a",
+  ".center-action", ".impact-copy", ".compliance-grid > div",
+  ".donate-heading", ".donate-grid > article", ".bank-heading", ".bank-grid > article", ".donation-trust > span", ".donation-trust > a",
+  ".involved-hero-copy", ".involved-hero-visual", ".involved-university-intro > *", ".involved-university-logo", ".involved-intro-grid > *", ".involved-benefits > div", ".involved-section-heading > *", ".involved-ledger-item", ".involved-evidence-heading > *", ".involved-student-item", ".involved-apply-panel > div", ".involved-volunteer-grid > *",
+  ".search-page-header > *", ".search-results-meta", ".search-result",
+  ".policy-hero-content > *", ".policy-intro > *", ".policy-publication-note", ".policy-group", ".policy-report-card",
+  ".policy-breadcrumb", ".policy-article > *", ".policy-side > *", ".policy-pagination",
+  ".page-hero-content > *", ".hiv-resource-copy > *",
+  ".media-intro > *", ".media-tile", ".book-cover-wrap", ".book-copy > *", ".press-heading > *", ".press-card",
+  ".facebook-updates-copy > *", ".facebook-frame-wrap",
+  ".partners-editorial-intro > *", ".partner-editorial-card", ".partners-editorial-invite > *"
 ].join(",");
 
 export default function MotionEnhancer() {

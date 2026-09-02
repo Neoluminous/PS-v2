@@ -5,12 +5,13 @@ type Language = "en" | "pa";
 interface LanguageContextType {
   language: Language;
   toggleLanguage: () => void;
+  setLanguage: (lang: Language) => void;
   t: (key: string) => string;
 }
 
 const translations: Record<string, { en: string; pa: string }> = {
-  "Change BeginsWith Samvad.": {
-    en: "Change BeginsWith Samvad.",
+  "Change Begins With Samvad.": {
+    en: "Change Begins With Samvad.",
     pa: "ਬਦਲਾਅ ਦੀ ਸ਼ੁਰੂਆਤ ਸੰਵਾਦ ਨਾਲ ਹੁੰਦੀ ਹੈ।"
   },
   "Dialogue that moves communities forward": {
@@ -5773,12 +5774,120 @@ const translations: Record<string, { en: string; pa: string }> = {
     en: "© 2026 Punjabi Samvad | Website built by Jaykaran Sagar",
     pa: "© 2026 ਪੰਜਾਬੀ ਸੰਵਾਦ | ਵੈੱਬਸਾਈਟ ਜੈਕਾਰਨ ਸਾਗਰ ਵੱਲੋਂ ਤਿਆਰ ਕੀਤੀ ਗਈ"
   },
+  "results for": {
+    en: "results for",
+    pa: "ਨਤੀਜੇ"
+  },
+  "result for": {
+    en: "result for",
+    pa: "ਨਤੀਜਾ"
+  },
+  "pages and resources": {
+    en: "pages and resources",
+    pa: "ਪੰਨੇ ਅਤੇ ਸਰੋਤ"
+  },
+  "No matching pages yet.": {
+    en: "No matching pages yet.",
+    pa: "ਅਜੇ ਕੋਈ ਮੇਲ ਖਾਂਦੇ ਪੰਨੇ ਨਹੀਂ ਲੱਭੇ।"
+  },
+  "Try a broader phrase, or visit": {
+    en: "Try a broader phrase, or visit",
+    pa: "ਕੋਈ ਹੋਰ ਸ਼ਬਦ ਅਜ਼ਮਾਓ, ਜਾਂ"
+  },
+  "and ask us directly.": {
+    en: "and ask us directly.",
+    pa: "ਵਿਖੇ ਜਾ ਕੇ ਸਿੱਧਾ ਪੁੱਛੋ।"
+  },
+  "Search the website": {
+    en: "Search the website",
+    pa: "ਵੈੱਬਸਾਈਟ 'ਤੇ ਖੋਜ ਕਰੋ"
+  },
+  "Language": {
+    en: "Language",
+    pa: "ਭਾਸ਼ਾ"
+  },
+  "Language / ਭਾਸ਼ਾ": {
+    en: "Language / ਭਾਸ਼ਾ",
+    pa: "ਭਾਸ਼ਾ / Language"
+  },
+  "Search": {
+    en: "Search",
+    pa: "ਖੋਜੋ"
+  },
+  "Search ": {
+    en: "Search ",
+    pa: "ਖੋਜੋ "
+  },
+  "Find what you need": {
+    en: "Find what you need",
+    pa: "ਆਪਣੀ ਲੋੜ ਅਨੁਸਾਰ ਲੱਭੋ"
+  },
+  "Search Punjabi Samvad": {
+    en: "Search Punjabi Samvad",
+    pa: "ਪੰਜਾਬੀ ਸੰਵਾਦ ਖੋਜੋ"
+  },
+  "Find programmes, public-health work, impact, people, policies and ways to participate.": {
+    en: "Find programmes, public-health work, impact, people, policies and ways to participate.",
+    pa: "ਪ੍ਰੋਗਰਾਮ, ਜਨਤਕ ਸਿਹਤ ਕਾਰਜ, ਪ੍ਰਭਾਵ, ਵਿਅਕਤੀ, ਨੀਤੀਆਂ ਅਤੇ ਸ਼ਾਮਲ ਹੋਣ ਦੇ ਤਰੀਕੇ ਲੱਭੋ।"
+  },
+  "Find programmes, focus areas, impact information, policies and ways to take part.": {
+    en: "Find programmes, focus areas, impact information, policies and ways to take part.",
+    pa: "ਪ੍ਰੋਗਰਾਮ, ਮੁੱਖ ਖੇਤਰ, ਪ੍ਰਭਾਵ ਜਾਣਕਾਰੀ, ਨੀਤੀਆਂ ਅਤੇ ਭਾਗ ਲੈਣ ਦੇ ਤਰੀਕੇ ਲੱਭੋ।"
+  },
+  "Try mental health, scholarships or policies": {
+    en: "Try mental health, scholarships or policies",
+    pa: "ਮਾਨਸਿਕ ਸਿਹਤ, ਸਕਾਲਰਸ਼ਿਪ ਜਾਂ ਨੀਤੀਆਂ ਲਿਖ ਕੇ ਦੇਖੋ"
+  },
+  "Read in Punjabi (ਪੰਜਾਬੀ)": {
+    en: "Read in Punjabi (ਪੰਜਾਬੀ)",
+    pa: "ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਪੜ੍ਹੋ (Read in English)"
+  },
+  "Read in English": {
+    en: "Read in English",
+    pa: "ਪੰਜਾਬੀ ਵਿੱਚ ਪੜ੍ਹੋ (Read in Punjabi)"
+  },
+  "Close menu": {
+    en: "Close menu",
+    pa: "ਮੀਨੂ ਬੰਦ ਕਰੋ"
+  },
+  "Open menu": {
+    en: "Open menu",
+    pa: "ਮੀਨੂ ਖੋਲ੍ਹੋ"
+  },
+  "Close search": {
+    en: "Close search",
+    pa: "ਖੋਜ ਬੰਦ ਕਰੋ"
+  },
+  "Primary navigation": {
+    en: "Primary navigation",
+    pa: "ਮੁੱਖ ਨੈਵੀਗੇਸ਼ਨ"
+  },
+  "Punjabi Samvad social media": {
+    en: "Punjabi Samvad social media",
+    pa: "ਪੰਜਾਬੀ ਸੰਵਾਦ ਸੋਸ਼ਲ ਮੀਡੀਆ"
+  },
+  "Punjabi Samvad on Instagram": {
+    en: "Punjabi Samvad on Instagram",
+    pa: "ਪੰਜਾਬੀ ਸੰਵਾਦ ਇੰਸਟਾਗ੍ਰਾਮ 'ਤੇ"
+  },
+  "Jyoti Bawa on LinkedIn": {
+    en: "Jyoti Bawa on LinkedIn",
+    pa: "ਜੋਤੀ ਬਾਵਾ ਲਿੰਕਡਇਨ 'ਤੇ"
+  },
+  "Punjabi Samvad on YouTube": {
+    en: "Punjabi Samvad on YouTube",
+    pa: "ਪੰਜਾਬੀ ਸੰਵਾਦ ਯੂਟਿਊਬ 'ਤੇ"
+  },
+  "Punjabi Samvad videos on Facebook": {
+    en: "Punjabi Samvad videos on Facebook",
+    pa: "ਪੰਜਾਬੀ ਸੰਵਾਦ ਦੀਆਂ ਵੀਡੀਓਜ਼ ਫੇਸਬੁੱਕ 'ਤੇ"
+  }
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>(() => {
+  const [language, setLanguageState] = useState<Language>(() => {
     if (typeof window !== "undefined") {
       const saved = localStorage.getItem("language");
       if (saved === "pa" || saved === "en") return saved;
@@ -5795,10 +5904,14 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     }
   }, [language]);
 
-  const toggleLanguage不易 = () => {
+  const setLanguage = (newLang: Language) => {
+    setLanguageState(newLang);
+    localStorage.setItem("language", newLang);
+  };
+
+  const toggleLanguage = () => {
     const newLang = language === "en" ? "pa" : "en";
     setLanguage(newLang);
-    localStorage.setItem("language", newLang);
   };
 
   const t = (key: string) => {
@@ -5806,7 +5919,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   };
 
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage: toggleLanguage不易, t }}>
+    <LanguageContext.Provider value={{ language, toggleLanguage, setLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );

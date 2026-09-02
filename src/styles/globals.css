@@ -177,34 +177,169 @@ footer{background:#0a285f;color:white;padding:75px 0 24px;position:relative;over
 @media(max-width:640px){.whatsapp-float{right:14px;bottom:max(14px,env(safe-area-inset-bottom));width:50px;height:50px}.whatsapp-float svg{width:24px;height:24px}}
 @media(prefers-reduced-motion:reduce){.whatsapp-float{transition:none}.whatsapp-float:hover{transform:none}}
 
-/* Language Toggle */
-.nav-lang-toggle {
-  display: flex;
+/* Language Switcher Pill & Mobile Bar */
+.nav-lang-pill {
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
-  background: rgba(0, 0, 0, 0.04);
-  border: none;
-  padding: 6px 12px;
+  gap: 5px;
+  background: #f0f5fc;
+  border: 1px solid #c8ddf5;
+  border-radius: 9999px;
+  padding: 3px 6px 3px 9px;
   cursor: pointer;
-  color: var(--text);
-  font-weight: 500;
-  border-radius: 8px;
-  transition: background 0.2s ease;
-  font-size: 13px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 6px rgba(11, 62, 152, 0.05);
 }
-.nav-lang-toggle:hover {
-  background: rgba(0, 0, 0, 0.08);
+.nav-lang-pill:hover {
+  background: #e4effd;
+  border-color: #bad3f5;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(11, 62, 152, 0.12);
 }
-.nav-lang-toggle span {
-  font-family: 'Mukta Mahee', sans-serif;
-  font-size: 14px;
+.lang-pill-icon {
+  color: var(--cobalt);
+  flex-shrink: 0;
+}
+.lang-pill-item {
+  padding: 3px 8px;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: #556c8d;
+}
+.lang-pill-item.active {
+  background: linear-gradient(135deg, #1d69e8, var(--cobalt-deep));
+  color: #ffffff;
+  font-weight: 800;
+  box-shadow: 0 2px 8px rgba(21, 87, 200, 0.35);
+}
+.lang-pill-item.gurmukhi {
+  font-family: 'Mukta Mahee', 'Noto Sans Gurmukhi', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+.lang-pill-divider {
+  color: #adc3dc;
+  font-size: 11px;
+  font-weight: 300;
+  user-select: none;
 }
 
-.mobile-lang-toggle {
-  width: 100%;
-  margin-bottom: 24px;
+.mobile-header-lang-pill {
+  display: none;
+  align-items: center;
+  gap: 5px;
+  background: #f0f5fc;
+  border: 1px solid #c8ddf5;
+  border-radius: 9999px;
+  padding: 6px 12px;
+  color: var(--cobalt-deep);
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.mobile-header-lang-pill:hover {
+  background: #e4effd;
+}
+.mobile-header-lang-pill .gurmukhi-tag {
+  font-family: 'Mukta Mahee', 'Noto Sans Gurmukhi', sans-serif;
+  font-size: 13px;
+}
+@media (max-width: 1100px) {
+  .mobile-header-lang-pill {
+    display: inline-flex;
+  }
+}
+
+.mobile-lang-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 6px 0 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+.mobile-lang-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+  color: var(--cobalt);
+}
+.mobile-lang-segmented {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #edf3fa;
+  padding: 4px;
+  border-radius: 12px;
+  gap: 6px;
+}
+.mobile-lang-seg {
+  display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 6px;
+  border: 0;
+  background: transparent;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #52627b;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
-.mobile-lang-toggle svg {
-  margin-right: 6px;
+.mobile-lang-seg.active {
+  background: #ffffff;
+  color: var(--cobalt-deep);
+  font-weight: 800;
+  box-shadow: 0 2px 8px rgba(15, 45, 90, 0.12);
 }
+.mobile-lang-seg.gurmukhi {
+  font-family: 'Mukta Mahee', 'Noto Sans Gurmukhi', sans-serif;
+  font-size: 15px;
+}
+
+/* Gurmukhi Typography & Editorial Polish */
+body.lang-pa {
+  --font-sans: 'Mukta Mahee', 'Noto Sans Gurmukhi', system-ui, -apple-system, sans-serif;
+  --font-display: 'Tiro Gurmukhi', 'Mukta Mahee', 'Noto Sans Gurmukhi', Georgia, serif;
+  letter-spacing: 0.005em;
+  -webkit-font-smoothing: antialiased;
+}
+body.lang-pa h1,
+body.lang-pa h2,
+body.lang-pa h3,
+body.lang-pa h4,
+body.lang-pa .brand strong {
+  font-family: var(--font-display);
+  letter-spacing: normal;
+  line-height: 1.25;
+  font-feature-settings: "kern" 1;
+}
+body.lang-pa .hero h1 {
+  font-family: 'Tiro Gurmukhi', 'Mukta Mahee', sans-serif;
+  line-height: 1.12;
+  font-weight: 700;
+}
+body.lang-pa .eyebrow {
+  letter-spacing: 0.08em;
+  font-weight: 800;
+}
+body.lang-pa p,
+body.lang-pa li {
+  line-height: 1.8;
+  font-size: 1.02em;
+}
+body.lang-pa .section-copy blockquote p {
+  line-height: 1.7;
+}
+

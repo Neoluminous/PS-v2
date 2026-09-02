@@ -1,4 +1,5 @@
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa6";
+import { useLanguage } from "../context/LanguageContext";
 
 const socialProfiles = [
   { label: "Punjabi Samvad on Instagram", href: "https://www.instagram.com/punjabisamvad/?hl=en", Icon: FaInstagram },
@@ -8,7 +9,8 @@ const socialProfiles = [
 ];
 
 export default function SocialLinks({ className = "" }: { className?: string }) {
-  return <div className={`social-links ${className}`.trim()} aria-label="Punjabi Samvad social media">
-    {socialProfiles.map(({ label, href, Icon }) => <a key={href} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} title={label}><Icon aria-hidden="true" /></a>)}
+  const { t } = useLanguage();
+  return <div className={`social-links ${className}`.trim()} aria-label={t("Punjabi Samvad social media")}>
+    {socialProfiles.map(({ label, href, Icon }) => <a key={href} href={href} target="_blank" rel="noopener noreferrer" aria-label={t(label)} title={t(label)}><Icon aria-hidden="true" /></a>)}
   </div>;
 }

@@ -12,8 +12,8 @@ export default function SiteFooter() {
       </div>
     </div>
     <div className="container editorial-wordmark">
-      <div className="editorial-logo"><img loading="lazy" src="/images/punjabi-samvad-logo.jpeg" alt="Punjabi Samvad" /><span>{t("Since")}<br /><strong>2004</strong></span></div>
-      <div><h2>Punjabi Samvad</h2><p>{t("Dialogue. Dignity. Change.")}</p></div>
+      <div className="editorial-logo"><img loading="lazy" src="/images/punjabi-samvad-logo.jpeg" alt={t("Punjabi Samvad")} /><span>{t("Since")}<br /><strong>2004</strong></span></div>
+      <div><h2>{t("Punjabi Samvad")}</h2><p>{t("Dialogue. Dignity. Change.")}</p></div>
     </div>
     <div className="editorial-divider"><i /><span>{t("Rooted in Punjab · Working across India")}</span><i /></div>
     <div className="container editorial-footer-grid">
@@ -30,6 +30,6 @@ export default function SiteFooter() {
       </details>
       <div className="editorial-contact"><span className="footer-kicker">{t("Start a conversation")}</span><a href="mailto:punjabisamvadasr@gmail.com"><Mail /><span>punjabisamvadasr@gmail.com</span></a><a href="tel:+918728033911"><Phone /><span>+91 87280 33911</span></a><a href="https://maps.google.com/?q=293+Green+Avenue+Amritsar+Punjab+143001" target="_blank" rel="noreferrer"><MapPin /><span>293, Green Avenue<br />Amritsar, Punjab 143001</span></a><SocialLinks className="footer-social-links" /></div>
     </div>
-    <div className="editorial-bottom"><div className="container"><span>© 2026 Punjabi Samvad <span className="editorial-credit-divider" aria-hidden="true">|</span> {t("Website built by Jaykaran Sagar")}</span><div><a href="/policies">{t("Policies")}</a><a href="/contact">{t("Contact")}</a><a href="/transparency">{t("Compliance")}</a></div></div></div>
+    <div className="editorial-bottom"><div className="container"><span>© 2026 {t("Punjabi Samvad")} <span className="editorial-credit-divider" aria-hidden="true">|</span> {t("Website built by Jaykaran Sagar")}</span><div><a href="/policies">{t("Policies")}</a><a href="/contact">{t("Contact")}</a><a href="/transparency">{t("Compliance")}</a></div></div></div>
   </footer>;
 }
