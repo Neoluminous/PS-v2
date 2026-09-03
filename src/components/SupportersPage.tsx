@@ -6,7 +6,7 @@ const supporters = [
     name: "Gireesh Damodaran",
     initials: "GD",
     role: "Corporate Strategist, Founder & CEO, GPNP PROSPERO",
-    image: "/images/supporters/gireesh-damodaran.jpeg",
+    image: "/images/supporters/gireesh-damodaran.webp",
     position: "50% 41%",
     biography: [
       "Gireesh Damodaran is a corporate strategist, entrepreneur and founder and CEO of GPNP PROSPERO Corporate Strategists. An alumnus of IIM Bangalore, he has worked across strategic planning, project development and business structuring. Based in Dubai, he brings an international perspective to his work.",
@@ -18,7 +18,7 @@ const supporters = [
     name: "Mandeep Singh",
     initials: "MS",
     role: "Chartered Accountant, Vipul Mandeep Arora & Associates",
-    image: "/images/supporters/mandeep-singh.jpeg",
+    image: "/images/supporters/mandeep-singh.webp",
     position: "center",
     biography: [
       "Mandeep Singh is a Chartered Accountant with Vipul Mandeep Arora & Associates.",
@@ -51,7 +51,7 @@ const supporters = [
     name: "Sukhpal Singh",
     initials: "SS",
     role: "Writer, Education Scholarship Supporter",
-    image: "/images/supporters/sukhpal-singh.jpeg",
+    image: "/images/supporters/sukhpal-singh.webp",
     position: "center 38%",
     biography: [
       "Sukhpal Singh is a writer who supports Punjabi Samvad’s education scholarship work through donations.",
@@ -62,7 +62,7 @@ const supporters = [
     name: "Dr Baljit Singh Chahal",
     initials: "BC",
     role: "Veterinary Doctor, Education Scholarship Supporter",
-    image: "/images/supporters/baljit-singh-chahal.jpeg",
+    image: "/images/supporters/baljit-singh-chahal.webp",
     position: "center 30%",
     biography: [
       "Dr Baljit Singh Chahal is a veterinary doctor and a supporter of Punjabi Samvad’s education scholarship work.",
@@ -73,7 +73,7 @@ const supporters = [
     name: "Raghav Seth",
     initials: "RS",
     role: "Education Scholarship Supporter",
-    image: "/images/supporters/raghav-seth.jpeg",
+    image: "/images/supporters/raghav-seth.webp",
     position: "center 22%",
     biography: [
       "Raghav Seth supports Punjabi Samvad’s education scholarships through donations.",

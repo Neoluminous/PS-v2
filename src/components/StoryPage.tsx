@@ -14,7 +14,7 @@ export default function StoryPage() {
   const { t } = useLanguage();
   return <>
     <section className="story-editorial-hero">
-      <img src="/images/real/khooh-stage-02.jpg" alt="Khooh Bolda Hai performed before an audience" />
+      <img src="/images/real/khooh-stage-02.webp" alt="Khooh Bolda Hai performed before an audience" />
       <div className="story-hero-overlay" />
       <div className="container story-hero-copy"><span className="eyebrow light">{t("Since 2004")}</span><h1>{t("A story that began with the courage to speak.")}</h1><p>{t("Punjabi Samvad began when Amit Bawa and Jyoti Bawa chose to act on gender-based violence and discrimination.")}</p><a href="#story-timeline" className="story-scroll-link">{t("Follow the journey")} <ArrowRight /></a></div>
     </section>
@@ -22,7 +22,7 @@ export default function StoryPage() {
       <div className="container story-origin">
         <div className="story-origin-number" aria-hidden="true">20</div>
         <div className="story-origin-copy"><span className="eyebrow">{t("The beginning")}</span><h2>{t("A platform for conversations that were difficult to start.")}</h2><p>{t("The early work brought social issues into the open through dialogue and creative expression.")} <em>{t("Khooh Bolda Hai")}</em>, {t("written and directed by Jyoti Bawa, addressed female foeticide, gender discrimination and the dignity of girls.")}</p><p>{t("It established a principle that still shapes Punjabi Samvad: people engage more deeply when an issue is made human, immediate and possible to discuss.")}</p></div>
-        <figure><img loading="lazy" src="/images/real/khooh-stage-04.jpg" alt="Actors performing Khooh Bolda Hai" /><figcaption><Film /> {t("Theatre became an early language of public awareness.")}</figcaption></figure>
+        <figure><img loading="lazy" src="/images/real/khooh-stage-04.webp" alt="Actors performing Khooh Bolda Hai" /><figcaption><Film /> {t("Theatre became an early language of public awareness.")}</figcaption></figure>
       </div>
     </section>
     <section className="story-impact-strip"><div className="container"><div><strong>1,100,000+</strong><span>{t("people reached")}</span></div><div><strong>{t("20+ years")}</strong><span>{t("of community work")}</span></div><p><em>{t("Khooh Bolda Hai")}</em> {t("helped communities confront female foeticide and discrimination against girls in a shared public space.")}</p></div></section>
@@ -40,15 +40,15 @@ export default function StoryPage() {
       <div className="container">
         <div className="story-expanded-head"><div><span className="eyebrow light">{t("The work expanded")}</span><h2>{t("From one urgent issue to a connected view of social well-being.")}</h2></div><p>{t("Education and vocational programmes created opportunities for women, girls and young people. Health work addressed HIV/AIDS, menstrual health and mental well-being. Substance-abuse prevention combined expert sessions, community outreach and film.")}</p></div>
         <div className="story-image-ribbon">
-          <figure><img loading="lazy" src="/images/real/drug-awareness-community.jpg" alt="Community substance-abuse awareness programme" /><span><Heart /> {t("Community outreach")}</span></figure>
-          <figure><img loading="lazy" src="/images/real/tirhayi-umar-launch.jpg" alt="Tirhayi Umar documentary launch" /><span><Sparkles /> {t("Creative communication")}</span></figure>
-          <figure><img loading="lazy" src="/images/real/drug-awareness-students.jpg" alt="Students participating in a Punjabi Samvad awareness programme" /><span><Landmark /> {t("Learning and opportunity")}</span></figure>
+          <figure><img loading="lazy" src="/images/real/drug-awareness-classroom.webp" alt="Community substance-abuse awareness programme" /><span><Heart /> {t("Community outreach")}</span></figure>
+          <figure><img loading="lazy" src="/images/real/tirhayi-umar-launch.webp" alt="Tirhayi Umar documentary launch" /><span><Sparkles /> {t("Creative communication")}</span></figure>
+          <figure><img loading="lazy" src="/images/real/drug-awareness-school.webp" alt="Students participating in a Punjabi Samvad awareness programme" /><span><Landmark /> {t("Learning and opportunity")}</span></figure>
         </div>
       </div>
     </section>
     <section className="section story-continuing-section">
       <div className="container story-continuing">
-        <figure><img loading="lazy" src="/images/real/khooh-stage-05.webp" alt="Young performers presenting Khooh Bolda Hai" /></figure>
+        <figure><img loading="lazy" src="/images/real/khooh-stage-04.webp" alt="Young performers presenting Khooh Bolda Hai" /></figure>
         <div><span className="eyebrow">{t("Continuing the work")}</span><h2>{t("The organisation moved forward without losing sight of why it began.")}</h2><p>{t("After Amit Bawa’s passing in 2014, Jyoti Bawa continued the work they began together. As President, she leads Punjabi Samvad across women’s empowerment, education, public health, mental well-being, substance-abuse awareness and Punjabi culture.")}</p><p>{t("The methods have grown and the partnerships have widened, but dialogue remains the starting point.")}</p><Link className="button" to="/our-work">{t("Explore our work")} <ArrowRight size={17} /></Link></div>
       </div>
     </section>

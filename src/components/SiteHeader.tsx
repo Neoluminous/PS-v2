@@ -39,7 +39,7 @@ export default function SiteHeader() {
     <div className="topbar"><div className="container topbar-inner"><span>{t("Registered NGO · Serving communities since 2004")}</span><div className="topbar-links"><a href="/transparency">{t("80G Approved")}</a><a href="/contact">{t("Amritsar, India")}</a><SocialLinks className="header-social-links" /></div></div></div>
     <header className="site-header">
       <div className="container nav-wrap">
-        <a className="brand" href="/" aria-label={t("Punjabi Samvad")}><img src="/images/punjabi-samvad-logo.jpeg" alt={t("Punjabi Samvad")} /><span><strong>{t("Punjabi Samvad")}</strong><small>{t("Dialogue. Dignity. Change.")}</small></span></a>
+        <a className="brand" href="/" aria-label={t("Punjabi Samvad")}><img src="/images/punjabi-samvad-logo.webp" alt={t("Punjabi Samvad")} /><span><strong>{t("Punjabi Samvad")}</strong><small>{t("Dialogue. Dignity. Change.")}</small></span></a>
         <nav className="desktop-nav" aria-label={t("Primary navigation")}>
           {groups.map(group => <div className="nav-group" key={group.label}><button>{t(group.label)}<ChevronDown size={14} /></button><div className="nav-dropdown">{group.links.map(([label, href]) => <a href={href} key={href}>{t(label)}</a>)}</div></div>)}
           <a href="/faq">{t("FAQs")}</a><a href="/contact">{t("Contact")}</a>

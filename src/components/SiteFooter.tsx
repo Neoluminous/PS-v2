@@ -12,7 +12,7 @@ export default function SiteFooter() {
       </div>
     </div>
     <div className="container editorial-wordmark">
-      <div className="editorial-logo"><img loading="lazy" src="/images/punjabi-samvad-logo.jpeg" alt={t("Punjabi Samvad")} /><span>{t("Since")}<br /><strong>2004</strong></span></div>
+      <div className="editorial-logo"><img loading="lazy" src="/images/punjabi-samvad-logo.webp" alt={t("Punjabi Samvad")} /><span>{t("Since")}<br /><strong>2004</strong></span></div>
       <div><h2>{t("Punjabi Samvad")}</h2><p>{t("Dialogue. Dignity. Change.")}</p></div>
     </div>
     <div className="editorial-divider"><i /><span>{t("Rooted in Punjab · Working across India")}</span><i /></div>

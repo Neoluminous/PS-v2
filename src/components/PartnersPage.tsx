@@ -6,11 +6,11 @@ const partnerLogos = [
   { src: "/images/partner-aditya.webp", alt: "Aditya Birla Group", className: "partner-editorial-logo-aditya" },
   { src: "/images/partner-government-punjab.svg", alt: "Government of Punjab, India", className: "partner-editorial-logo-wide" },
   { src: "/images/partner-culture.svg", alt: "Ministry of Culture, Government of India" },
-  { src: "/images/partner-iim-horizontal.png", alt: "Indian Institute of Management Amritsar", className: "partner-editorial-logo-wide" },
+  { src: "/images/partner-iim-horizontal.webp", alt: "Indian Institute of Management Amritsar", className: "partner-editorial-logo-wide" },
   { src: "/images/partner-cms.svg", alt: "CMS Foundation", className: "partner-editorial-logo-cms" },
-  { src: "/images/partner-techvimal.jpg", alt: "Techvimal Foundation", className: "partner-editorial-logo-wide" },
+  { src: "/images/partner-techvimal.webp", alt: "Techvimal Foundation", className: "partner-editorial-logo-wide" },
   { src: "/images/partner-information-broadcasting.svg", alt: "Ministry of Information and Broadcasting, Government of India", className: "partner-editorial-logo-wide" },
-  { src: "/images/partner-punjab-health.jpeg", alt: "Department of Health and Family Welfare, Punjab", className: "partner-editorial-logo-seal" },
+  { src: "/images/partner-punjab-health.webp", alt: "Department of Health and Family Welfare, Punjab", className: "partner-editorial-logo-seal" },
 ];
 
 export default function PartnersPage({ page }: { page: SitePage }) {

@@ -8,7 +8,7 @@ export default function PresidentPage() {
   return <section className="president-page section"><div className="container">
     <div className="president-intro">
       <div className="president-portrait">
-        <img src="/images/president/jyoti-bawa-speaking.jpg" alt="Jyoti Bawa speaking at a public event"/>
+        <img src="/images/president/jyoti-bawa-speaking.webp" alt="Jyoti Bawa speaking at a public event"/>
       </div>
       <div className="president-opening">
         <span className="eyebrow">{t("President of Punjabi Samvad")}</span>
@@ -44,8 +44,8 @@ export default function PresidentPage() {
       </div>
     </section>
     <div className="president-photo-pair" aria-label="Jyoti Bawa at cultural and educational programmes">
-      <img loading="lazy" decoding="async" src="/images/president/jyoti-bawa-cultural-event.jpg" alt="Jyoti Bawa at a Punjabi cultural event"/>
-      <img loading="lazy" decoding="async" src="/images/president/jyoti-bawa-with-students.jpg" alt="Jyoti Bawa with school students"/>
+      <img loading="lazy" decoding="async" src="/images/president/jyoti-bawa-cultural-event.webp" alt="Jyoti Bawa at a Punjabi cultural event"/>
+      <img loading="lazy" decoding="async" src="/images/president/jyoti-bawa-with-students.webp" alt="Jyoti Bawa with school students"/>
     </div>
     <section className="president-recognition" aria-labelledby="president-recognition-title">
       <div className="president-recognition-copy">
@@ -67,7 +67,7 @@ export default function PresidentPage() {
         <a className="button button-white" href={amazonBook} target="_blank" rel="noreferrer">{t("Buy the book on Amazon")} <ArrowUpRight size={17}/></a>
       </div>
       <a className="president-book-visual" href={amazonBook} target="_blank" rel="noreferrer" aria-label="View Candle in the Wind on Amazon">
-        <img loading="lazy" decoding="async" src="/images/president/candle-in-the-wind-book-mockup.png" alt="Three-dimensional mockup of Candle in the Wind by Jyoti Bawa"/>
+        <img loading="lazy" decoding="async" src="/images/president/candle-in-the-wind-book-mockup.webp" alt="Three-dimensional mockup of Candle in the Wind by Jyoti Bawa"/>
       </a>
       <div className="president-books-list">
         <span>{t("Also by Jyoti Bawa")}</span>
@@ -82,7 +82,7 @@ export default function PresidentPage() {
         <h2>{t("Internships grounded in community work")}</h2>
         <p>{t("Jyoti treats internships as a place for students to observe community work, ask questions and exchange ideas. Punjabi Samvad has hosted young people from schools and universities, including IIM Amritsar, for practical exposure to research and social programmes.")}</p>
       </div>
-      <img loading="lazy" decoding="async" src="/images/president/jyoti-bawa-internship.jpg" alt="Jyoti Bawa presenting an internship certificate to a student"/>
+      <img loading="lazy" decoding="async" src="/images/president/jyoti-bawa-internship.webp" alt="Jyoti Bawa presenting an internship certificate to a student"/>
     </div>
   </div></section>;
 }

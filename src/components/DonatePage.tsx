@@ -14,8 +14,8 @@ export default function DonatePage() {
       <div className="donate-grid">
         <article className="upi-panel">
           <div className="donate-panel-copy"><span><QrCode/>{t("Scan & pay")}</span><h3>{t("Pay with any UPI app")}</h3><p>{t("Open your preferred UPI app and scan the official Punjabi Samvad payment code.")}</p></div>
-          <img className="donation-qr" src="/images/donation-qr.png" alt="Punjabi Samvad official UPI payment QR code"/>
-          <a className="download-link" href="/images/donation-qr.png" download>{t("Download QR code")}</a>
+          <img className="donation-qr" src="/images/donation-qr.webp" alt="Punjabi Samvad official UPI payment QR code"/>
+          <a className="download-link" href="/images/donation-qr.webp" download>{t("Download QR code")}</a>
         </article>
         <article className="razorpay-panel">
           <div><span className="payment-kicker"><CreditCard/>{t("Online payment")}</span><h3>{t("Donate securely with Razorpay")}</h3><p>{t("Continue to Punjabi Samvad's official hosted checkout to pay by supported online payment methods.")}</p></div>

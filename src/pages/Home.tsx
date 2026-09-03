@@ -29,7 +29,7 @@ const organisationSchema = {
       name: "Punjabi Samvad",
       alternateName: "Punjabi Samvad Foundation",
       url: "https://punjabisamvad.com/",
-      logo: "https://punjabisamvad.com/images/punjabi-samvad-logo.jpeg",
+      logo: "https://punjabisamvad.com/images/punjabi-samvad-logo.webp",
       image: "https://punjabisamvad.com/og.png",
       foundingDate: "2004",
       description: "An Indian NGO working across women's empowerment, education, mental health, menstrual health, youth development, public health and creative advocacy.",
@@ -161,11 +161,11 @@ export default function Home() {
             <div className="partner-aditya"><img loading="lazy" src="/images/partner-aditya.webp" alt="Aditya Birla Group" /><span>{t("Aditya Birla Educational Trust")}</span><small>{t("Mental & menstrual health")}</small></div>
             <div className="partner-punjab"><span className="partner-logo-tile"><img loading="lazy" src="/images/partner-government-punjab.svg" alt="Government of Punjab, India" /></span><span>{t("Government of Punjab, India")}</span><small>{t("Public health initiatives")}</small></div>
             <div><img loading="lazy" src="/images/partner-culture.svg" alt="Ministry of Culture, Government of India" /><span>{t("Ministry of Culture")}</span><small>{t("Culture & heritage")}</small></div>
-            <div className="partner-iim"><img loading="lazy" src="/images/partner-iim-horizontal.png" alt="Indian Institute of Management Amritsar" /><span>{t("IIM Amritsar")}</span><small>{t("Internships & academia")}</small></div>
+            <div className="partner-iim"><img loading="lazy" src="/images/partner-iim-horizontal.webp" alt="Indian Institute of Management Amritsar" /><span>{t("IIM Amritsar")}</span><small>{t("Internships & academia")}</small></div>
             <div className="partner-cms"><span className="partner-cms-logo"><img loading="lazy" src="/images/partner-cms.svg" alt="CMS Foundation" /></span><span>{t("CMS Foundation")}</span><small>{t("Community programmes")}</small></div>
-            <div className="partner-techvimal"><img loading="lazy" src="/images/partner-techvimal.jpg" alt="Techvimal Foundation" /><span>{t("Techvimal Foundation")}</span><small>{t("Institutional collaboration")}</small></div>
+            <div className="partner-techvimal"><img loading="lazy" src="/images/partner-techvimal.webp" alt="Techvimal Foundation" /><span>{t("Techvimal Foundation")}</span><small>{t("Institutional collaboration")}</small></div>
             <div className="partner-mib"><img loading="lazy" src="/images/partner-information-broadcasting.svg" alt="Ministry of Information and Broadcasting, Government of India" /><span>{t("Ministry of Information & Broadcasting")}</span><small>{t("Public communication")}</small></div>
-            <div className="partner-punjab-health"><img loading="lazy" src="/images/partner-punjab-health.jpeg" alt="Department of Health and Family Welfare, Punjab" /><span>{t("Department of Health & Family Welfare, Punjab")}</span><small>{t("Public health")}</small></div>
+            <div className="partner-punjab-health"><img loading="lazy" src="/images/partner-punjab-health.webp" alt="Department of Health and Family Welfare, Punjab" /><span>{t("Department of Health & Family Welfare, Punjab")}</span><small>{t("Public health")}</small></div>
           </div>
           <div className="partnership-banner">
             <div><HeartHandshake size={38} /><span><small>{t("CSR & institutional partnerships")}</small><strong>{t("Let's build a programme with measurable social impact.")}</strong></span></div>

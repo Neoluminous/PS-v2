@@ -1,6 +1,6 @@
 "use client";
-
 import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const targets = [
   ".section-heading", ".section-copy", ".about-visual", ".focus-card", ".stat",
@@ -30,27 +30,61 @@ const targets = [
 ].join(",");
 
 export default function MotionEnhancer() {
+  const location = useLocation();
+
   useEffect(() => {
-    const elements = Array.from(document.querySelectorAll<HTMLElement>(targets));
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    elements.forEach((element, index) => {
-      element.classList.add("reveal-item");
-      element.style.setProperty("--reveal-delay", `${Math.min(index % 4, 3) * 70}ms`);
-    });
-    if (reduced || !("IntersectionObserver" in window)) {
-      elements.forEach(element => element.classList.add("is-visible"));
-      return;
+    let observer: IntersectionObserver | null = null;
+    let scanTimeout: ReturnType<typeof setTimeout>;
+
+    if (!reduced && "IntersectionObserver" in window) {
+      observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer!.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: "0px 0px -8%", threshold: .08 });
     }
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
+
+    const scanAndBind = () => {
+      const elements = Array.from(document.querySelectorAll<HTMLElement>(targets));
+      let indexCounter = 0;
+      
+      elements.forEach((element) => {
+        // Only process elements that haven't been bound yet
+        if (!element.classList.contains("reveal-item")) {
+          element.classList.add("reveal-item");
+          
+          if (reduced || !("IntersectionObserver" in window)) {
+            element.classList.add("is-visible");
+          } else {
+            element.style.setProperty("--reveal-delay", `${Math.min(indexCounter % 4, 3) * 70}ms`);
+            observer!.observe(element);
+            indexCounter++;
+          }
         }
       });
-    }, { rootMargin: "0px 0px -8%", threshold: .08 });
-    elements.forEach(element => observer.observe(element));
-    return () => observer.disconnect();
-  }, []);
+    };
+
+    // Initial scan
+    scanAndBind();
+
+    // Re-scan when DOM changes (e.g., Suspense lazy loading finishes)
+    const mutationObserver = new MutationObserver(() => {
+      clearTimeout(scanTimeout);
+      scanTimeout = setTimeout(scanAndBind, 50);
+    });
+    
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      clearTimeout(scanTimeout);
+      if (observer) observer.disconnect();
+      mutationObserver.disconnect();
+    };
+  }, [location.pathname]); // Re-run setup on route changes as a safeguard
+
   return null;
 }

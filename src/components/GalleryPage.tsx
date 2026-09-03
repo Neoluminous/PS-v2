@@ -22,9 +22,9 @@ const archivePhotos = [
   { src: "/images/gallery/khooh-stage-04.webp", alt: "The Khooh Bolda Hai cast performing for an audience" },
   { src: "/images/gallery/tirhayi-umar-group.webp", alt: "Participants gathered for Punjabi Samvad's Tirhayi Umar work" },
   { src: "/images/gallery/tirhayi-umar-launch.webp", alt: "Guests at the launch connected with Tirhayi Umar" },
-  { src: "/images/real/drug-awareness-classroom.jpg", alt: "A Punjabi Samvad drug-awareness classroom session" },
-  { src: "/images/real/p2e-schoolgirls-classroom.jpeg", alt: "Students taking part in a Passport to Earning classroom session" },
-  { src: "/images/real/women-community-group.jpg", alt: "Women gathered during a Punjabi Samvad community programme" },
+  { src: "/images/real/drug-awareness-classroom.webp", alt: "A Punjabi Samvad drug-awareness classroom session" },
+  { src: "/images/real/p2e-schoolgirls-classroom.webp", alt: "Students taking part in a Passport to Earning classroom session" },
+  { src: "/images/real/women-community-group.webp", alt: "Women gathered during a Punjabi Samvad community programme" },
 ];
 
 export default function GalleryPage({ page }: { page: SitePage }) {

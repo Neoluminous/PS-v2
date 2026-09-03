@@ -19,7 +19,7 @@ const programmes = {
     detailTitle: "Skills and certificates for the career ahead.",
     facts: [["Free", "No course fee"], ["Certificate", "Recognition on completion"]],
     topics: ["Digital productivity", "Financial literacy", "Employability skills", "Flexible online learning"],
-    images: ["/images/programmes/passport-to-earning/p2e-guided-learning.webp", "/images/real/p2e-schoolgirls-classroom.jpeg", "/images/programmes/passport-to-earning/p2e-standee.webp"],
+    images: ["/images/programmes/passport-to-earning/p2e-guided-learning.webp", "/images/real/p2e-schoolgirls-classroom.webp", "/images/programmes/passport-to-earning/p2e-standee.webp"],
     alts: ["A young Punjabi learner working on digital skills with a mentor", "Schoolgirls participating in a Passport to Earning learning session", "Passport to Earning India programme standee"],
     ctaTitle: "Choose a course and build your career skills.", ctaText: "Create an account on the official platform, explore the available courses and choose the learning path that suits you.",
     href: "https://skills.myp2e.org/", theme: "p2e"

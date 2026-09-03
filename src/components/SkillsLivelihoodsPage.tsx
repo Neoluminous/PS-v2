@@ -13,7 +13,7 @@ const stories = [
   {
     name: "Sunita Rani",
     outcome: "Small-scale masala production",
-    image: "/images/skills-livelihoods/sunita-masala.webp",
+    image: "/images/skills-livelihoods/spice-quality-session.webp",
     alt: "A participant examining ingredients during traditional masala preparation",
     text: "Sunita began selling masalas from home after the workshop. Her husband, who struggled with addiction, has started helping her distribute the products. Taking part in the programme and contributing to the household has improved Sunita's physical and mental well-being.",
     quote: "With my own hands, I can now support my family. Every small bit I earn brings a big sense of peace.",
@@ -21,7 +21,7 @@ const stories = [
   {
     name: "Jasveer Kaur",
     outcome: "Independent masala production",
-    image: "/images/skills-livelihoods/jasveer-masala.webp",
+    image: "/images/skills-livelihoods/spice-quality-session-upright.webp",
     alt: "Women processing spices during a skills workshop",
     text: "Following the skills sessions, Jasveer set up independent masala preparation at home. The work provides a steady, manageable source of income without taking her away from family responsibilities.",
     quote: "I can work on this at my own time and still take care of my house. I don’t have to depend on anyone else anymore.",
@@ -29,7 +29,7 @@ const stories = [
   {
     name: "Ajay",
     outcome: "Selling organic compost",
-    image: "/images/skills-livelihoods/restored/ajay.webp",
+    image: "/images/skills-livelihoods/restored/anita-livelihood.webp",
     alt: "A participant learning compost preparation outdoors",
     privacy: "We have changed Ajay’s name to protect his privacy during recovery.",
     text: "Ajay is a young man working to recover from substance dependence. He learned to prepare compost, approached local nurseries and began offering it to households nearby. He now has a routine, a source of income and a practical reason to keep moving forward.",

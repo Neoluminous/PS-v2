@@ -33,16 +33,16 @@ function WorkHero({ page, variant, image, imageAlt }: { page: SitePage, variant:
 const focusIcons = [HeartHandshake, Brain, Ribbon, Megaphone, Stethoscope];
 const focusImages = [
   undefined,
-  { src: "/images/generated/mental-health-focus.webp", alt: "A health professional speaking to a group about mental well-being" },
+  { src: "/images/focus-mental.webp", alt: "A health professional speaking to a group about mental well-being" },
   undefined,
-  { src: "/images/generated/awareness-focus.webp", alt: "Community members participating in a public awareness session" },
+  { src: "/images/focus-substance.webp", alt: "Community members participating in a public awareness session" },
   undefined,
 ];
 
 export function FocusAreasPage({ page }: { page: SitePage }) {
   const { t } = useLanguage();
   return <>
-    <WorkHero page={page} variant="focus" image="/images/focus-areas.jpg" imageAlt="People talking during a community session" />
+    <WorkHero page={page} variant="focus" image="/images/focus-community.webp" imageAlt="People talking during a community session" />
     <section className="work-editorial focus-page-redesign">
       <div className="container">
         <div className="focus-story-grid">
@@ -70,14 +70,14 @@ export function FocusAreasPage({ page }: { page: SitePage }) {
 const programmeImages = [
   { src: "/images/real/khooh-stage-03.webp", alt: "A scene from the play Khooh Bolda Hai addressing gender issues" },
   undefined,
-  { src: "/images/programmes/vaccination-camp.jpeg", alt: "A healthcare worker administering a vaccine to an elderly patient" },
+  { src: "/images/real/cms-health-camp.webp", alt: "A healthcare worker administering a vaccine to an elderly patient" },
   undefined,
 ];
 
 export function ProgrammesPage({ page }: { page: SitePage }) {
   const { t } = useLanguage();
   return <>
-    <WorkHero page={page} variant="programmes" image="/images/programmes-health.jpg" imageAlt="A facilitator leading a community health workshop" />
+    <WorkHero page={page} variant="programmes" image="/images/programmes-health.webp" imageAlt="A facilitator leading a community health workshop" />
     <section className="work-editorial programmes-page-redesign">
       <div className="container">
         <div className="programme-method">
@@ -128,7 +128,7 @@ export function ProgrammesPage({ page }: { page: SitePage }) {
             <p>{t("Use the QR code in the official campaign artwork, visit Breakfree India or call the national AIDS helpline at 1097.")}</p>
             <a className="button" href="https://www.breakfreeindia.org/" target="_blank" rel="noreferrer">{t("Open Breakfree India")} <ArrowRight size={17} /></a>
           </div>
-          <img loading="lazy" decoding="async" src="/images/real/hiv-self-risk-assessment.jpeg" alt="National HIV self-risk assessment campaign with QR code and AIDS helpline 1097" />
+          <img loading="lazy" decoding="async" src="/images/real/hiv-self-risk-assessment.webp" alt="National HIV self-risk assessment campaign with QR code and AIDS helpline 1097" />
         </article>
 
         {page.cta && <a className="work-next-link" href={page.cta.href}><span>{t("Bring a programme to your community or institution")}</span><strong>{t(page.cta.label)}</strong><ArrowRight aria-hidden="true" /></a>}
@@ -147,7 +147,7 @@ const impactFigures = [
 export function ImpactPage({ page }: { page: SitePage }) {
   const { t } = useLanguage();
   return <>
-    <WorkHero page={page} variant="impact" image="/images/impact-feedback.jpg" imageAlt="A programme team reviewing participation and community feedback" />
+    <WorkHero page={page} variant="impact" image="/images/impact-feedback.webp" imageAlt="A programme team reviewing participation and community feedback" />
     <section className="work-editorial impact-page-redesign">
       <div className="container">
         <div className="impact-figures">

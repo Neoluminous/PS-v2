@@ -26,9 +26,9 @@ const legacyLearningRoutes: Record<string, string> = {
 };
 
 const featurePhotos: Record<string, { src: string; alt: string }> = {
-  programmes: { src: "/images/programmes-health.jpg", alt: "A health educator leading an awareness workshop" },
-  impact: { src: "/images/impact-feedback.jpg", alt: "A programme team reviewing community feedback" },
-  partners: { src: "/images/partners-planning.jpg", alt: "Partners planning a social impact programme" },
+  programmes: { src: "/images/programmes-health.webp", alt: "A health educator leading an awareness workshop" },
+  impact: { src: "/images/impact-feedback.webp", alt: "A programme team reviewing community feedback" },
+  partners: { src: "/images/partners-planning.webp", alt: "Partners planning a social impact programme" },
   "csr-partnerships": { src: "/images/generated/info/csr-partnership-planning.webp", alt: "Punjabi Samvad representatives and institutional partners planning a community programme" },
   "fund-a-programme": { src: "/images/generated/info/fund-education-programme.webp", alt: "A student receiving learning support from a mentor and Punjabi Samvad representative" },
   "discuss-partnership": { src: "/images/generated/info/community-partnership-discussion.webp", alt: "Punjabi Samvad field coordinators discussing a community programme with local representatives" },
@@ -78,7 +78,7 @@ export default function ContentPage() {
         </article>)}</div>}
         {slug === "programmes" && <article className="hiv-resource">
           <div className="hiv-resource-copy"><span className="eyebrow">{t("Public-health resource")}</span><h2>{t("Private HIV self-risk assessment")}</h2><p>{t("The national self-risk assessment gives people a private way to understand potential HIV and STI risk, find reliable information and take the next step towards testing or treatment. Personal details do not need to be disclosed to Punjabi Samvad.")}</p><p>{t("Scan the code in the official campaign artwork, visit Breakfree India, or call the national AIDS helpline at 1097.")}</p><a className="button" href="https://www.breakfreeindia.org/" target="_blank" rel="noreferrer">{t("Open Breakfree India")} <ArrowRight size={17}/></a></div>
-          <img loading="lazy" decoding="async" src="/images/real/hiv-self-risk-assessment.jpeg" alt="National HIV self-risk assessment campaign with QR code and AIDS helpline 1097" />
+          <img loading="lazy" decoding="async" src="/images/real/hiv-self-risk-assessment.webp" alt="National HIV self-risk assessment campaign with QR code and AIDS helpline 1097" />
         </article>}
         {page.cta && <div className="page-cta"><div><span>{t("Ready to start a conversation?")}</span><h2>{t("Let's create meaningful change together.")}</h2></div><a className="button button-white" href={page.cta.href}>{t(page.cta.label)}<ArrowRight size={17}/></a></div>}
       </div></section>}

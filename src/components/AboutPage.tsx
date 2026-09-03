@@ -25,15 +25,15 @@ export default function AboutPage() {
           <div className="about-since"><strong>2004</strong><span>{t("Two decades of community-led work")}</span></div>
         </div>
         <div className="about-photo-composition">
-          <figure className="about-photo-main"><img src="/images/real/women-community-group.jpg" alt="Women taking part in a Punjabi Samvad community programme" /></figure>
-          <figure className="about-photo-float"><img src="/images/real/drug-awareness-school.jpg" alt="Students at a Punjabi Samvad awareness session" /></figure>
+          <figure className="about-photo-main"><img src="/images/real/women-community-group.webp" alt="Women taking part in a Punjabi Samvad community programme" /></figure>
+          <figure className="about-photo-float"><img src="/images/real/drug-awareness-school.webp" alt="Students at a Punjabi Samvad awareness session" /></figure>
           <div className="about-photo-note"><HeartHandshake /><span>{t("Rooted in Punjab")}<br />{t("working with a national outlook")}</span></div>
         </div>
       </div>
     </section>
     <section className="section about-roots-section">
       <div className="container about-roots-layout">
-        <div className="about-roots-image"><img loading="lazy" src="/images/real/khooh-stage-01.jpg" alt="A performance of Khooh Bolda Hai" /><span>{t("Creative advocacy has been part of our work from the beginning.")}</span></div>
+        <div className="about-roots-image"><img loading="lazy" src="/images/real/khooh-stage-01.webp" alt="A performance of Khooh Bolda Hai" /><span>{t("Creative advocacy has been part of our work from the beginning.")}</span></div>
         <div className="about-roots-copy">
           <span className="eyebrow">{t("Our roots")}</span>
           <h2>{t("A local response grew into sustained social action.")}</h2>
@@ -47,9 +47,9 @@ export default function AboutPage() {
       <div className="container">
         <div className="about-section-heading"><span className="eyebrow light">{t("What we work on")}</span><h2>{t("Different concerns. One connected view of community well-being.")}</h2></div>
         <div className="about-work-mosaic">
-          <article className="about-work-panel panel-large"><img loading="lazy" src="/images/real/women-education-group.webp" alt="Women gathered after a Punjabi Samvad learning session" /><div><span>{t("Women’s learning")}</span><h3>{t("Education that builds confidence and opportunity")}</h3></div></article>
-          <article className="about-work-panel"><img loading="lazy" src="/images/real/cms-health-camp.jpg" alt="People receiving consultations at a Punjabi Samvad health camp" /><div><span>{t("Community health")}</span><h3>{t("Health check-ups and practical guidance")}</h3></div></article>
-          <article className="about-work-panel"><img loading="lazy" src="/images/real/tirhayi-umar-group.webp" alt="Guests holding Tirhayi Umar at its launch" /><div><span>{t("Substance-abuse awareness")}</span><h3>{t("A book that brings addiction into public view")}</h3></div></article>
+          <article className="about-work-panel panel-large"><img loading="lazy" src="/images/real/women-community-group.webp" alt="Women gathered after a Punjabi Samvad learning session" /><div><span>{t("Women’s learning")}</span><h3>{t("Education that builds confidence and opportunity")}</h3></div></article>
+          <article className="about-work-panel"><img loading="lazy" src="/images/real/cms-health-camp.webp" alt="People receiving consultations at a Punjabi Samvad health camp" /><div><span>{t("Community health")}</span><h3>{t("Health check-ups and practical guidance")}</h3></div></article>
+          <article className="about-work-panel"><img loading="lazy" src="/images/real/tirhayi-umar-launch.webp" alt="Guests holding Tirhayi Umar at its launch" /><div><span>{t("Substance-abuse awareness")}</span><h3>{t("A book that brings addiction into public view")}</h3></div></article>
         </div>
       </div>
     </section>
@@ -65,7 +65,7 @@ export default function AboutPage() {
       </div>
     </section>
     <section className="about-advocacy-band">
-      <img loading="lazy" src="/images/real/khooh-stage-03.jpg" alt="Khooh Bolda Hai theatre performance" />
+      <img loading="lazy" src="/images/real/khooh-stage-03.webp" alt="Khooh Bolda Hai theatre performance" />
       <div className="about-advocacy-shade" />
       <div className="container about-advocacy-copy"><span className="eyebrow light">{t("Creative advocacy")}</span><h2><strong>{t("1,100,000+ people reached.")}</strong></h2><p><em>{t("Khooh Bolda Hai")}</em> {t("brought female foeticide and discrimination against girls into public conversation. Theatre, film and writing remain central to how we make difficult subjects easier to face.")}</p></div>
     </section>
@@ -84,7 +84,7 @@ export default function AboutPage() {
     <section className="section about-today-section">
       <div className="container about-today-layout">
         <div><span className="eyebrow">{t("Punjabi Samvad today")}</span><h2>{t("Grounded where the work began, building for a wider reach.")}</h2><p>{t("Headquartered in Amritsar, Punjabi Samvad remains close to the communities at the centre of its work. President Jyoti Bawa leads the organisation and continues the work she began with Amit Bawa.")}</p><p>{t("The purpose remains clear: address neglected issues honestly, create space for participation and build programmes people can use.")}</p><Link className="button" to="/our-story">{t("Read our story")} <ArrowRight size={17} /></Link></div>
-        <figure><img loading="lazy" src="/images/leadership-theatre.jpg" alt="A theatre facilitator working with young performers" /></figure>
+        <figure><img loading="lazy" src="/images/leadership-theatre.webp" alt="A theatre facilitator working with young performers" /></figure>
       </div>
     </section>
   </>;

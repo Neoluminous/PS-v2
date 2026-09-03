@@ -4,13 +4,13 @@ import { useLanguage } from "../context/LanguageContext";
 const archiveMedia = Array.from({ length: 26 }, (_, index) => {
   const number = index + 1;
   if (number === 17) return null;
-  return `/images/media/archive/media-${String(number).padStart(2, "0")}.${number === 26 ? "png" : "jpg"}`;
+  return `/images/media/archive/media-${String(number).padStart(2, "0")}.webp`;
 }).filter((src): src is string => Boolean(src));
 
 const features = [
-  { publication: "Radio Club India", title: "Prevention Is Social: Young Voices from Punjab Lead the Conversation on HIV", image: "/images/media/features/radio-club-hiv.jpg", href: "https://radioclubindia.blogspot.com/2026/07/prevention-is-social-young-voices-from.html?m=1" },
-  { publication: "The Tribune", title: "Jyoti Bawa’s ‘Candle in the Wind’ sheds light on problems overlooked by society", image: "/images/media/features/tribune-candle.jpg", href: "https://www.tribuneindia.com/news/amritsar/jyotis-candle-in-the-wind-sheds-light-on-problems-overlooked-by-society/" },
-  { publication: "CMS Foundation", title: "Breaking the Chains: Communities in Punjab confront drug addiction", image: "/images/media/features/cms-drug-awareness.jpg", href: "https://www.linkedin.com/posts/cmsfoundation-cmsinfosystems-ugcPost-7426912728767684608-w7ZB/" },
+  { publication: "Radio Club India", title: "Prevention Is Social: Young Voices from Punjab Lead the Conversation on HIV", image: "/images/media/features/radio-club-hiv.webp", href: "https://radioclubindia.blogspot.com/2026/07/prevention-is-social-young-voices-from.html?m=1" },
+  { publication: "The Tribune", title: "Jyoti Bawa’s ‘Candle in the Wind’ sheds light on problems overlooked by society", image: "/images/media/features/tribune-candle.webp", href: "https://www.tribuneindia.com/news/amritsar/jyotis-candle-in-the-wind-sheds-light-on-problems-overlooked-by-society/" },
+  { publication: "CMS Foundation", title: "Breaking the Chains: Communities in Punjab confront drug addiction", image: "/images/media/features/cms-drug-awareness.webp", href: "https://www.linkedin.com/posts/cmsfoundation-cmsinfosystems-ugcPost-7426912728767684608-w7ZB/" },
 ];
 
 export default function MediaFeaturesPage() {
@@ -28,7 +28,7 @@ export default function MediaFeaturesPage() {
     </div>
     <article className="book-feature">
       <div className="book-cover-wrap">
-        <img loading="lazy" decoding="async" src="/images/media/books/candle-in-the-wind-jyoti-bawa.jpg" alt="Cover of Candle in the Wind by Jyoti Bawa"/>
+        <img loading="lazy" decoding="async" src="/images/media/books/candle-in-the-wind-jyoti-bawa.webp" alt="Cover of Candle in the Wind by Jyoti Bawa"/>
       </div>
       <div className="book-copy">
         <span className="book-kicker"><BookOpen size={17}/> {t("A book by Jyoti Bawa")}</span>
